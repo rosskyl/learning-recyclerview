@@ -41,11 +41,23 @@ public class RecyclerViewFragment extends Fragment {
 
         List<Contact> contacts = mockContacts();
 
+        // Set the adapter
+        recyclerContacts.setAdapter(new ContactAdapter(contacts));
     }
 
     private List<Contact> mockContacts() {
         // Creates a list of Contacts and fills them up with data
         List<Contact> contacts = new ArrayList<>();
+        contacts.add(new Contact("Sam", "Front of the class"));
+        contacts.add(new Contact("Sam", "Front of the class"));
+        contacts.add(new Contact("Susie", "Back of the class"));
+        contacts.add(new Contact("Susie", "Back of the class"));
+        contacts.add(new Contact("Bernice", "Not even in this class"));
+        contacts.add(new Contact("Sam", "Front of the class"));
+        contacts.add(new Contact("Sam", "Front of the class"));
+        contacts.add(new Contact("Susie", "Back of the class"));
+        contacts.add(new Contact("Susie", "Back of the class"));
+        contacts.add(new Contact("Bernice", "Not even in this class"));
         contacts.add(new Contact("Sam", "Front of the class"));
         contacts.add(new Contact("Sam", "Front of the class"));
         contacts.add(new Contact("Susie", "Back of the class"));

@@ -1,14 +1,14 @@
 package com.nodakmutual.learnrecyclerview;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Sam Stutsman on March, 2015.
@@ -19,6 +19,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 
     // Constructor class creates the adapter and passses in what we will need from our Fragment
     public ContactAdapter(List<Contact> contacts) {
+
         this.contacts = contacts;
     }
 
@@ -74,6 +75,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
         // This method is just to pass on the onClick event to our individual items! Neat!
         @Override
         public void onClick(View view) {
+
             listener.onItemClick(view, getPosition());
         }
 
